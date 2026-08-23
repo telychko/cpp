@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #include <cstdio>
 #include <Windows.h>
 bool initializeConsole()
@@ -10,3 +12,5 @@ bool initializeConsole()
     return ok;
 }
 static bool isConsoleAllocated = initializeConsole();
+
+#endif

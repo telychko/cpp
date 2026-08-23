@@ -17,9 +17,4 @@ class Tuple
     TupleElement<sizeof...(T), T...> element;
 };
 
-int main(int, char**)
-{
-    Tuple<int, char, char> i;
-
-    return 0;
-}
+// Tuple<int, char, char> i;

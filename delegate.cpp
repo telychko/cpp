@@ -102,15 +102,15 @@ struct ObjPtr
 // method syntax, method pointer syntax T::method T::*method
 // void T::(), void (T::*)()
 
-int main()
-{
-    C c;
-    ObjPtr<int, double> p, d;
-    p.bind(&c, &C::f);
-    p(5);
-
-    d = p;
-
-    d(8, 2.3);
-    return 0;
-}
+// Test:
+//{
+//    C c;
+//    ObjPtr<int, double> p, d;
+//    p.bind(&c, &C::f);
+//    p(5);
+//
+//    d = p;
+//
+//    d(8, 2.3);
+//    return 0;
+//}
