@@ -1,0 +1,1 @@
+/home/maksym/.my/template/make/Makefile
