@@ -54,8 +54,22 @@
 
 // TODO: template template parameters
 
+template <typename T>
+class Class1
+{
+};
+
 // A template with at least one parameter pack is called a variadic template.
-template <class... >
+template <template<typename T> typename Class1, class... >
 class Pack
 {
+};
+
+namespace
+{
+    void mook()
+    {
+        Pack<Class1> p;
+        (void)p;
+    }
 };
