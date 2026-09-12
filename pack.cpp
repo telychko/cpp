@@ -1,13 +1,15 @@
 #include "pack.h"
 
-#include <iostream>
+//#include <iostream>
 
 // Metaprogramming template compile-time only feature
+// Not be confused with Variadic arguments, ... at the end of function parameters
 
 //  * a parameter pack
 //      * template parameter pack
 //        A template parameter pack is a template parameter that accepts zero or more template arguments
 //        (non-types, types, or templates).
+//        A template with at least one parameter pack is called a variadic template.
 //      * function parameter pack
 //        A function parameter pack is a function parameter that accepts zero or more function arguments.
 //
@@ -52,24 +54,54 @@
 //Pack expansion (appears in a body of a template)
 //pattern ...
 
-// TODO: template template parameters
+// Template parameter pack
 
-template <typename T>
-class Class1
-{
-};
-
-// A template with at least one parameter pack is called a variadic template.
-template <template<typename T> typename Class1, class... >
-class Pack
-{
-};
-
-namespace
-{
-    void mook()
+    class SimpleClass
     {
-        Pack<Class1> p;
-        (void)p;
+    };
+
+    template <typename T>
+    class ClassTemplate
+    {
+    };
+
+    template <class, class> class C {};
+
+    template<> class C<int,bool> {};
+
+    template <template<class...> class...>
+    class ClassPack
+    {
+    };
+
+    typedef ClassTemplate<int> boo;
+    template<class T> using goo=ClassTemplate<T>;
+
+    //      * template parameter pack
+    //        A template parameter pack is a template parameter that accepts zero or more template arguments
+    //        (non-types, types, or templates).
+
+    namespace
+    {
+        void mook()
+        {
+            ClassPack<ClassTemplate> p;
+            (void)p;
+        }
     }
-};
+
+// Function parameter pack
+
+    namespace
+    {
+        template<typename T=int, typename... args>
+        void f(args...){}
+
+        // Variadic arguments
+        void c(...){}
+
+        void hook()
+        {
+            f("jj", 0);
+        }
+    }
