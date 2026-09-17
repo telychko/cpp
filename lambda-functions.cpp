@@ -1,0 +1,1 @@
+auto roo = []<typename T>(){};

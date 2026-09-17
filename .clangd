@@ -1,0 +1,3 @@
+CompileFlags:
+  #Add: [ -D__aarch64__, -DAPP_VERSION=1 ]
+  Add: [ -std=c++26 ]

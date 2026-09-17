@@ -1,6 +1,7 @@
 #include "pack.h"
 
 //#include <iostream>
+#include <utility>
 
 // Metaprogramming template compile-time only feature
 // Not be confused with Variadic arguments, ... at the end of function parameters
@@ -105,3 +106,16 @@
             f("jj", 0);
         }
     }
+
+// Lambda init-capture pack (since C++20)
+
+template<typename... T>
+void zozo(T... args)
+{
+    auto poo = [args...](auto... ts){};
+}
+
+void kozo()
+{
+    zozo(1);
+}
