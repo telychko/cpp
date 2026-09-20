@@ -119,3 +119,5 @@ void kozo()
 {
     zozo(1);
 }
+
+// Structured binding pack (since C++26)

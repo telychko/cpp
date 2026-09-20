@@ -1,9 +1,10 @@
 #include <iostream>
 
-#include "pack.h"
+#include "lambda-functions.h"
 
 int main()
 {
+    lambda();
     std::cout<<"C++\n";
     return 0;
 }

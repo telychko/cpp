@@ -1,3 +1,6 @@
 #ifndef LAMBDA_FUNCTIONS_H
 #define LAMBDA_FUNCTIONS_H
+
+void lambda();
+
 #endif //LAMBDA_FUNCTIONS_H
