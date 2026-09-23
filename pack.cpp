@@ -1,7 +1,8 @@
 #include "pack.h"
 
-//#include <iostream>
+#include <iostream>
 #include <utility>
+#include <tuple>
 
 // Metaprogramming template compile-time only feature
 // Not be confused with Variadic arguments, ... at the end of function parameters
@@ -112,7 +113,10 @@
 template<typename... T>
 void zozo(T... args)
 {
-    auto poo = [args...](auto... ts){};
+    auto poo = [args...](auto... ts)
+    {
+        std::tuple<T...>(args...);
+    };
 }
 
 void kozo()
@@ -121,3 +125,20 @@ void kozo()
 }
 
 // Structured binding pack (since C++26)
+
+template <typename... T>
+void strbind(T... po)
+{
+    int arr[] = { po... };
+    auto [zi, ...xpoo] =  arr ;
+    auto [...mi, xp] =  arr ;
+
+    zozo(mi...);
+
+    std::tuple<T...> tup(po...);
+}
+
+void zuza()
+{
+    strbind(1, 2, 3);
+}
