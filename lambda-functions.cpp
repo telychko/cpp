@@ -9,7 +9,7 @@ public:
     Copiable(const Copiable& other)
     {
         (void)other;
-        std::cout << "Copiable copied\n";
+        std::cout << "Lambda Copiable copied\n";
     }
 };
 
