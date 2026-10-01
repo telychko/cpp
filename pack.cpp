@@ -113,10 +113,13 @@
 template<typename... T>
 void zozo(T... args)
 {
+    // c++26
+    #ifdef __cpp_generic_lambdas
     auto poo = [args...](auto... ts)
     {
         std::tuple<T...>(args...);
     };
+    #endif
 }
 
 void kozo()

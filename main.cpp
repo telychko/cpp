@@ -1,3 +1,4 @@
+#include <initializer_list>
 #include <iostream>
 
 #include "lambda-functions.h"
@@ -7,9 +8,15 @@
 class Copyable
 {
 public:
-    Copyable(const Copyable &other)
+    Copyable(const Copyable &other) = delete;
+    //{
+    //    std::cout << "Copyable copied\n";
+    //}
+
+    //explicit 
+    Copyable(std::initializer_list<int> poo)
     {
-        std::cout << "Copyable copied\n";
+        std::cout << "Pupuseria ";
     }
     Copyable(int i)
     {
@@ -19,18 +26,20 @@ public:
     int i;
 };
 
-void fufa(Copyable a)
+Copyable fufa(Copyable a)
 {
     std::cout << a.i << "\n";
+    return {3};
 }
 
 int main()
 {
-    Copyable a(1);
-    fufa(2);
+    fufa({2});
 
-    lambda();
-    zuza();
+    const Copyable &moo = {4};
+
+    //lambda();
+    //zuza();
     //print_all(0, "32");
     std::cout<<"C++\n";
     return 0;
