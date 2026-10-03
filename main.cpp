@@ -16,7 +16,7 @@ public:
     //explicit 
     Copyable(std::initializer_list<int> poo)
     {
-        std::cout << "Pupuseria ";
+        std::cout << "Pupuseria\n";
     }
     Copyable(int i)
     {
@@ -36,7 +36,7 @@ int main()
 {
     fufa({2});
 
-    const Copyable &moo = {4};
+    const Copyable &moo = 4, &coo = {4};
 
     //lambda();
     //zuza();
