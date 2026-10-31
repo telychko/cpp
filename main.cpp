@@ -5,6 +5,8 @@
 #include "pack.h"
 //#include "template-for-expansion.h"
 
+import A;
+
 class Copyable
 {
 public:

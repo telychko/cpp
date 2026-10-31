@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# c++26
+#std="c++11"
+std="c++26"
 
+#CC=clang CXX=clang \
 DEBUG='make && ./C++' \
-CC=clang CXX=clang CXXFLAGS='-fno-elide-constructors -std=c++11' PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/python-venv/bin:$PATH" \
+CXXFLAGS="-std=$std -fno-elide-constructors" PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/python-venv/bin:$PATH" \
     nvim -S Session.vim
