@@ -43,6 +43,6 @@ int main()
     //lambda();
     //zuza();
     //print_all(0, "32");
-    std::cout<<"C++\n";
+    std::cout<<"C++\n" << export_var;
     return 0;
 }
