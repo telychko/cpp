@@ -8,8 +8,10 @@ DEBUG =
 DEFINES +=
 # List of headers to be precompiled
 PCH +=
+# Precompiled header file global include
+PCH_INCLUDE =
 # Module header units
-HMODULES += iostream
+SYSTEM_HEADER_UNITS += iostream
 # Link libraries. Format: -l<lib name>, -L<lib directory>
 LDLIBS +=
 # C compiler flags
