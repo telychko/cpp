@@ -1,7 +1,7 @@
-export module A;
+export module B;
 
 export {
     extern int export_var;
+    int susa = 1;
 }
 
-int susa = 1;

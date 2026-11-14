@@ -119,6 +119,7 @@ void zozo(T... args)
     {
         std::tuple<T...>(args...);
     };
+    (void)poo;
     #endif
 }
 
@@ -135,6 +136,7 @@ void strbind(T... po)
     int arr[] = { po... };
     auto [zi, ...xpoo] =  arr ;
     auto [...mi, xp] =  arr ;
+    (void)zi;
 
     zozo(mi...);
 
@@ -144,4 +146,7 @@ void strbind(T... po)
 void zuza()
 {
     strbind(1, 2, 3);
+    (void)hook;
+    (void)c;
+    (void)mook;
 }
