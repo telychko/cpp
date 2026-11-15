@@ -3,7 +3,7 @@
 # Packages
 PKGCONFS +=
 # Debug build
-DEBUG =
+#DEBUG = 1
 # Global definitions. Format: <definition>, <definition>=<value>
 DEFINES +=
 # List of headers to be precompiled
