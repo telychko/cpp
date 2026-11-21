@@ -1,6 +1,6 @@
 #include "Au.h"
 
-import A;
+import MMM;
 import <iostream>;
 
 void Auf()

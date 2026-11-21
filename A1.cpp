@@ -2,6 +2,6 @@ module;
 
 #include <stdlib.h>
 
-module A;
+module MMM;
 
 int export_var = 8;

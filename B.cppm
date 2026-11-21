@@ -1,7 +1,7 @@
 export module B;
 
 export {
-    extern int export_var;
-    int susa = 1;
+    extern int b_export_var;
+    int b_susa = 1;
 }
 

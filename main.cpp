@@ -1,6 +1,5 @@
-#include <iostream>
-
-import A;
+import <iostream>;
+import MMM;
 
 int main()
 {

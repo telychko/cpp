@@ -1,3 +1,3 @@
 module B;
 
-extern int export_var;
+extern int b_export_var;

@@ -4,14 +4,17 @@ module;
 
 #include <stdlib.h>
 
-export module A;
+export module MMM;
 
 import "pack.h";
+
+import B;
 
 export {
     extern int export_var;
     int suse = 1;
 }
+
 
 void f()
 {

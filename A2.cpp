@@ -1,3 +1,3 @@
-module A;
+module MMM;
 
 extern int export_var;

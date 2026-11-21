@@ -1,3 +1,3 @@
 module B;
 
-int export_var = 8;
+int b_export_var = 8;
