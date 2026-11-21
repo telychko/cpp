@@ -1,4 +1,6 @@
 *.o
 *.d
+gcm.cache/
+*.?hcf
 C++
 Session.vim
